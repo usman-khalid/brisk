@@ -10,7 +10,8 @@
     "lint": "npm run lint:js && npm run lint:styles",
     "start": "cross-env concurrently --names \"HELIX,VITE\" -c \"bgBlue.bold,bgMagenta.bold\" \"aem up\" \"vite build --watch\"",
     "build": "vite build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "precommit": "npm run build && npm run lint"
   },
   "repository": {
     "type": "git",
