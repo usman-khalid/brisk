@@ -1,5 +1,5 @@
 /* ========================================= 
-             TYPOGRAPHT 
+             TYPOGRAPHY
 ======================================== */
 
 :root {
@@ -34,7 +34,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 }
 
-@media (min-width: 767px) {
+@media (--breakpoint-md) {
   :root {
     --space-base: 1.125em;
     --text-base-size: 1.25rem;

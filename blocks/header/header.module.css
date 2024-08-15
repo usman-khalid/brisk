@@ -1,4 +1,5 @@
 @import '../../styles/_mixins';
+@import '../../styles/_breakpoints';
 
 header {
   & .nav-wrapper {
@@ -187,7 +188,7 @@ header {
   }
 }
 
-@media (min-width: 600px) {
+@media (--breakpoint-sm) {
   header {
     & nav {
       padding: 0 2rem;
@@ -195,7 +196,7 @@ header {
   }
 }
 
-@media (min-width: 900px) {
+@media (--breakpoint-lg) {
   header {
     & nav {
       display: flex;

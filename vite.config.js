@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { defineConfig } = require('vite');
 const postCSSMixinsPlugin = require('postcss-mixins');
+const postCSSCustomMedia = require('postcss-custom-media');
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -36,7 +37,10 @@ const getFileCategory = (name) => {
 export default defineConfig({
   css: {
     postcss: {
-      plugins: [postCSSMixinsPlugin()],
+      plugins: [
+        postCSSMixinsPlugin(),
+        postCSSCustomMedia(),
+      ],
     },
     modules: {
       localsConvention: 'camelCaseOnly',

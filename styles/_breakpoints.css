@@ -1,0 +1,9 @@
+/* ========================================= 
+             BREAKPOINTS 
+======================================== */
+
+@custom-media --breakpoint-sm (min-width: 576px);
+@custom-media --breakpoint-md (min-width: 768px);
+@custom-media --breakpoint-lg (min-width: 992px);
+@custom-media --breakpoint-xl (min-width: 1200px);
+@custom-media --breakpoint-xxl (min-width: 1400px);
