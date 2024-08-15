@@ -14,7 +14,7 @@ const blockEntries = glob.sync(path.join(blocksDir, '**/!(*.module).{css,js}'));
 
 const staticEntries = [
   'scripts/**/*.js',
-  'assets/styles/styles.css',
+  'styles/styles.css',
   'styles/lazy-styles.css',
   'styles/fonts.css',
 ].flatMap((pattern) => glob.sync(path.resolve(__dirname, pattern)));
