@@ -1,5 +1,5 @@
-@import '../../styles/_mixins';
-@import '../../styles/_breakpoints';
+@import '../../styles/mixins';
+@import '../../styles/breakpoints';
 
 header {
   & .nav-wrapper {

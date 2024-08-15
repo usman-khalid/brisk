@@ -1,4 +1,4 @@
-@import '../../styles/_breakpoints';
+@import '../../styles/breakpoints';
 
 .columns {
   & img {
