@@ -2,7 +2,9 @@
   "extends": "stylelint-config-recommended",
   "rules": {
     "at-rule-no-unknown": null,
-    "block-no-empty": null,
+    "custom-property-pattern": null,
+    "function-no-unknown": null,
+    "no-descending-specificity": null,
     "selector-pseudo-class-no-unknown": [
       true,
       {
