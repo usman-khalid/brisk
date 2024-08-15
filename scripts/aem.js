@@ -103,10 +103,10 @@ function setup() {
   window.hlx.codeBasePath = '';
   window.hlx.lighthouse = new URLSearchParams(window.location.search).get('lighthouse') === 'on';
 
-  const scriptEl = document.querySelector('script[src$="/scripts/scripts.js"]');
+  const scriptEl = document.querySelector('script[src$="/dist/scripts/scripts.min.js"]');
   if (scriptEl) {
     try {
-      [window.hlx.codeBasePath] = new URL(scriptEl.src).pathname.split('/scripts/scripts.js');
+      [window.hlx.codeBasePath] = new URL(scriptEl.src).pathname.split('/dist/scripts/scripts.min.js');
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -541,12 +541,12 @@ async function loadBlock(block) {
     block.dataset.blockStatus = 'loading';
     const { blockName } = block.dataset;
     try {
-      const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`);
+      const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/dist/blocks/${blockName}/${blockName}.min.css`);
       const decorationComplete = new Promise((resolve) => {
         (async () => {
           try {
             const mod = await import(
-              `${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.js`
+              `${window.hlx.codeBasePath}/dist/blocks/${blockName}/${blockName}.min.js`
             );
             if (mod.default) {
               await mod.default(block);
