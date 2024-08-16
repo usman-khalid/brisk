@@ -1,36 +1,4 @@
 /* ========================================= BASE STYLES ======================================== */
-p, ul, ol, dl, blockquote {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-pre {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-family: var(--fixed-font-family);
-  font-size: var(--text-sm);
-  overflow: scroll;
-}
-
-hr {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  border: 0;
-  border-bottom: 1px solid var(--overlay-background-color);
-}
-
-code {
-  font-family: var(--fixed-font-family);
-  font-size: var(--text-sm);
-  padding: 0.125em;
-}
-
-samp {
-  font-family: var(--fixed-font-family);
-  font-size: var(--text-sm);
-  padding: 0.125em;
-}
-
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
@@ -207,66 +175,6 @@ body.appear {
 
 header {
   height: var(--nav-height);
-}
-
-h1 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xxxl);
-}
-
-h2 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xxl);
-}
-
-h3 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xl);
-}
-
-h4 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-lg);
-}
-
-h5 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-md);
-}
-
-h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-sm);
 }
 
 @media (--breakpoint-sm) {

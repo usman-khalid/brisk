@@ -1,0 +1,31 @@
+p, ul, ol, dl, blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+pre {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: var(--fixed-font-family);
+  font-size: var(--text-sm);
+  overflow: scroll;
+}
+
+hr {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 0;
+  border-bottom: 1px solid var(--overlay-background-color);
+}
+
+code {
+  font-family: var(--fixed-font-family);
+  font-size: var(--text-sm);
+  padding: 0.125em;
+}
+
+samp {
+  font-family: var(--fixed-font-family);
+  font-size: var(--text-sm);
+  padding: 0.125em;
+}
