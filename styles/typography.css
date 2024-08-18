@@ -1,5 +1,5 @@
 /* ========================================= 
-             TYPOGRAPHY VARIABLES
+             TYPOGRAPHY
 ======================================== */
 
 :root {
@@ -9,9 +9,7 @@
   --text-body: var(--text-md);
 }
 
-/* ========================================= 
-             HEADINGS
-======================================== */
+/* Headings */
 h1, .h1 {
   font-size: clamp(
     calc(var(--text-base-size) * var(--text-scale-ratio) * 1.75),
@@ -19,7 +17,6 @@ h1, .h1 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 3)
   );
   line-height: calc(var(--base-line-height) - 0.15);
-  margin-bottom: var(--spacing-sm);
   font-weight: 700;
 }
 
@@ -30,7 +27,6 @@ h2, .h2 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 2.5)
   );
   line-height: calc(var(--base-line-height) - 0.15);
-  margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
 
@@ -41,7 +37,6 @@ h3, .h3 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 2)
   );
   line-height: calc(var(--base-line-height) - 0.1);
-  margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
 
@@ -52,7 +47,6 @@ h4, .h4 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 1.75)
   );
   line-height: var(--base-line-height);
-  margin-bottom: var(--spacing-sm);
   font-weight: 400;
 }
 
@@ -63,7 +57,6 @@ h5, .h5 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 1.5)
   );
   line-height: calc(var(--base-line-height) + 0.05);
-  margin-bottom: var(--spacing-sm);
   font-weight: 400;
 }
 
@@ -74,14 +67,11 @@ h6, .h6 {
     calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25)
   );
   line-height: calc(var(--base-line-height) + 0.1);
-  margin-bottom: 0.5rem;
   font-weight: 300;
 }
 
 
-/* ========================================= 
-             SITE TYPOGRAPHY
-======================================== */
+/* Site Typography */
 body {
   font-family: var(--body-font-family);
   font-size: clamp(
@@ -103,4 +93,21 @@ body {
   b, strong {
     font-weight: 700;
   }
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
 }

@@ -1,9 +1,9 @@
 import { add } from 'ramda';
 import { createOptimizedPicture } from '../../scripts/aem.js';
-import cardClasses from './cards.module.css';
+import cardStyles from './cards.module.css';
 
 export default function decorate(block) {
-  block.classList.add(cardClasses.cards);
+  block.classList.add(cardStyles.cards);
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
@@ -11,8 +11,8 @@ export default function decorate(block) {
     li.innerHTML = row.innerHTML;
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) {
-        div.className = cardClasses.cardImage;
-      } else div.className = cardClasses.cardBody;
+        div.className = cardStyles.cardImage;
+      } else div.className = cardStyles.cardBody;
     });
     ul.append(li);
   });

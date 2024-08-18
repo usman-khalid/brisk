@@ -1,5 +1,5 @@
-import alertClasses from './alert.module.css';
+import alertStyles from './alert.module.css';
 
 export default function decorate(block) {
-  block.classList.add(alertClasses.alert);
+  block.classList.add(alertStyles.alert);
 }

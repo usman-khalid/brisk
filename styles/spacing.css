@@ -1,6 +1,8 @@
 /* ========================================= 
-             SPACING VARIABLES 
+             SPACING
 ======================================== */
+
+@import './mixins';
 
 :root {
   --spacing-xxxxs: calc(0.125 * var(--spacing-unit));
@@ -16,94 +18,92 @@
   --spacing-xxxxl: calc(13.75 * var(--spacing-unit));
 }
 
-/* ========================================= 
-             SPACING UTILITIES
-======================================== */
 
+/* Utilities */
 .m-xxxxs {
-  margin: var(--spacing-xxxxs);
+  @mixin margin-all var(--spacing-xxxxs);
 }
 
 .m-xxxs {
-  margin: var(--spacing-xxxs);
+  @mixin margin-all var(--spacing-xxxs);
 }
 
 .m-xxs {
-  margin: var(--spacing-xxs);
+  @mixin margin-all var(--spacing-xxs);
 }
 
 .m-xs {
-  margin: var(--spacing-xs);
+  @mixin margin-all var(--spacing-xs);
 }
 
 .m-sm {
-  margin: var(--spacing-sm);
+  @mixin margin-all var(--spacing-sm);
 }
 
 .m-md {
-  margin: var(--spacing-md);
+  @mixin margin-all var(--spacing-md);
 }
 
 .m-lg {
-  margin: var(--spacing-lg);
+  @mixin margin-all var(--spacing-lg);
 }
 
 .m-xl {
-  margin: var(--spacing-xl);
+  @mixin margin-all var(--spacing-xl);
 }
 
 .m-xxl {
-  margin: var(--spacing-xxl);
+  @mixin margin-all var(--spacing-xxl);
 }
 
 .m-xxxl {
-  margin: var(--spacing-xxxl);
+  @mixin margin-all var(--spacing-xxxl);
 }
 
 .m-xxxxl {
-  margin: var(--spacing-xxxxl);
+  @mixin margin-all var(--spacing-xxxxl);
 }
 
 .p-xxxxs {
-  padding: var(--spacing-xxxxs);
+  @mixin padding-all var(--spacing-xxxxs);
 }
 
 .p-xxxs {
-  padding: var(--spacing-xxxs);
+  @mixin padding-all var(--spacing-xxxs);
 }
 
 .p-xxs {
-  padding: var(--spacing-xxs);
+  @mixin padding-all var(--spacing-xxs);
 }
 
 .p-xs {
-  padding: var(--spacing-xs);
+  @mixin padding-all var(--spacing-xs);
 }
 
 .p-sm {
-  padding: var(--spacing-sm);
+  @mixin padding-all var(--spacing-sm);
 }
 
 .p-md {
-  padding: var(--spacing-md);
+  @mixin padding-all var(--spacing-md);
 }
 
 .p-lg {
-  padding: var(--spacing-lg);
+  @mixin padding-all var(--spacing-lg);
 }
 
 .p-xl {
-  padding: var(--spacing-xl);
+  @mixin padding-all var(--spacing-xl);
 }
 
 .p-xxl {
-  padding: var(--spacing-xxl);
+  @mixin padding-all var(--spacing-xxl);
 }
 
 .p-xxxl {
-  padding: var(--spacing-xxxl);
+  @mixin padding-all var(--spacing-xxxl);
 }
 
 .p-xxxxl {
-  padding: var(--spacing-xxxxl);
+  @mixin padding-all var(--spacing-xxxxl);
 }

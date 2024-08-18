@@ -1,12 +1,12 @@
 import { readBlockConfig, decorateIcons } from '../../scripts/aem.js';
-import footerClasses from './footer.module.css';
+import footerStyles from './footer.module.css';
 
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  block.classList.add(footerClasses.footer);
+  block.classList.add(footerStyles.footer);
   const cfg = readBlockConfig(block);
   block.textContent = '';
 
