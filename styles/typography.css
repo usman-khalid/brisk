@@ -1,102 +1,106 @@
 /* ========================================= 
-             TYPOGRAPHY
+             TYPOGRAPHY VARIABLES
 ======================================== */
 
 :root {
-  /* Base text variables */
-  --text-base-size: 1rem;
-  --text-scale-ratio: 1.25;
-  --text-sm: calc((var(--text-base-size)) / var(--text-scale-ratio));
-  --text-md: calc(var(--text-sm) * var(--text-scale-ratio));
-  --text-lg: calc(var(--text-md) * var(--text-scale-ratio) * var(--text-scale-ratio));
-  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
-
-  /* Body text size */
+  --text-sm: calc(var(--text-base-size) * var(--text-scale-ratio) * 0.75);
+  --text-md: calc(var(--text-base-size) * var(--text-scale-ratio) * 1);
+  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25);
   --text-body: var(--text-md);
-
-  /* Heading sizes */
-  --heading-size-xxxl: var(--text-xxxl);
-  --heading-size-xxl: var(--text-xxl);
-  --heading-size-xl: var(--text-xl);
-  --heading-size-lg: var(--text-lg);
-  --heading-size-md: var(--text-md);
-  --heading-size-sm: var(--text-sm);
-
-  /* Line heights */
-  --heading-line-height: 1.2;
-  --body-line-height: 1.4;
-
-  /* Fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 }
 
-@media (--breakpoint-md) {
-  :root {
-    --space-base: 1.125em;
-    --text-base-size: 1.25rem;
+/* ========================================= 
+             HEADINGS
+======================================== */
+h1, .h1 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.75),
+    4vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 3)
+  );
+  line-height: calc(var(--base-line-height) - 0.15);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.5),
+    3.5vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 2.5)
+  );
+  line-height: calc(var(--base-line-height) - 0.1);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25),
+    3vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 2)
+  );
+  line-height: calc(var(--base-line-height) - 0.05);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.125),
+    2.5vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.75)
+  );
+  line-height: var(--base-line-height);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 400;
+}
+
+h5, .h5 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1),
+    2vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.5)
+  );
+  line-height: calc(var(--base-line-height) + 0.05);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 400;
+}
+
+h6, .h6 {
+  font-size: clamp(
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 0.875),
+    1.5vw + var(--text-base-size),
+    calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25)
+  );
+  line-height: calc(var(--base-line-height) + 0.1);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+
+/* ========================================= 
+             SITE TYPOGRAPHY
+======================================== */
+body {
+  font-family: var(--body-font-family);
+  font-size: clamp(
+    var(--min-font-size),
+    calc(var(--text-base-size) + 1vw * (var(--max-font-size) - var(--min-font-size))),
+    var(--max-font-size)
+  );
+
+  p {
+    & a {
+      color: var(--link-color);
+  
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
   }
-}
 
-h1 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xxxl);
-}
-
-h2 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xxl);
-}
-
-h3 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-xl);
-}
-
-h4 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-lg);
-}
-
-h5 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-md);
-}
-
-h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
-  font-size: var(--heading-size-sm);
+  b, strong {
+    font-weight: 700;
+  }
 }

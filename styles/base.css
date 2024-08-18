@@ -49,7 +49,7 @@ main img {
 }
 
 main .section {
-  padding: 64px var(--space-base);
+  padding: 64px var(--spacing-unit);
 }
 
 main .section.highlight {
@@ -79,7 +79,7 @@ a.button:any-link {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: var(--space-base) 0;
+  margin: var(--spacing-unit) 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -109,7 +109,7 @@ button {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: var(--space-base) 0;
+  margin: var(--spacing-unit) 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -160,10 +160,7 @@ button.secondary {
 }
 
 body {
-  font-size: var(--text-body);
   margin: 0;
-  font-family: var(--body-font-family);
-  line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
@@ -185,7 +182,7 @@ header {
 
 @media (--breakpoint-lg) {
   .section > div {
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: auto;
   }
 }

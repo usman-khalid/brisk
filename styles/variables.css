@@ -1,8 +1,26 @@
 /* ========================================= 
-             SITE VARIABLES 
+            BASE VARIABLES 
 ======================================== */
 
 :root {
+  /* Viewports */
+  --site-max-width: 1200px;
+
+  /* Typography */
+  --text-base-size: 1rem;
+  --text-scale-ratio: 1.25;
+  --min-font-size: var(--text-base-size);
+  --max-font-size: 1.25rem;
+  --base-line-height: 1.4;
+
+  /* Fonts */
+  --body-font-family: roboto, roboto-fallback;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+
+  /* Spacing */
+  --spacing-unit: 1rem;
+
   /* Site colors */
   --link-color: var(--brand-primary);
   --link-hover-color: var(--brand-primary-lighter);

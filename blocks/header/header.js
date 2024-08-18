@@ -2,7 +2,7 @@ import { decorateIcons, getMetadata } from '../../scripts/aem.js';
 import headerClasses from './header.module.css';
 
 // media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+const isDesktop = window.matchMedia('(min-width: 1200px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {

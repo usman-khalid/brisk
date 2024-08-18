@@ -4,7 +4,7 @@ footer {
   font-size: var(--text-body);
 
   & .footer {
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: auto;
 
     & p {

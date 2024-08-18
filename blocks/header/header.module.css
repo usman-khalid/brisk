@@ -214,14 +214,14 @@ header {
 				
         .nav-drop {
           position: relative;
-          padding-right: var(--space-base);
+          padding-right: var(--spacing-unit);
           cursor: pointer;
 
           &::after {
             content: '';
             display: inline-block;
             position: absolute;
-            top: 0.5em;
+            top: var(--spacing-xxs);
             right: 2px;
             transform: rotate(135deg);
             width: 6px;
