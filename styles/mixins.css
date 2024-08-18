@@ -1,6 +1,45 @@
+/* ========================================= 
+             MIXINS 
+======================================== */
+
+/* Lists */ 
 @define-mixin reset-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: block;
+}
+
+/* Margins & Paddings */
+@define-mixin padding-all $size {
+  padding: var(--spacing-$(size));
+}
+
+@define-mixin padding-x $size {
+  padding-left: var(--spacing-$(size));
+  padding-right: var(--spacing-$(size));
+}
+
+@define-mixin padding-y $size {
+  padding-top: var(--spacing-$(size));
+  padding-bottom: var(--spacing-$(size));
+}
+
+@define-mixin margin-all $size {
+  margin: var(--spacing-$(size));
+}
+
+@define-mixin margin-x $size {
+  margin-left: var(--spacing-$(size));
+  margin-right: var(--spacing-$(size));
+}
+
+@define-mixin margin-y $size {
+  margin-top: var(--spacing-$(size));
+  margin-bottom: var(--spacing-$(size));
+}
+
+@define-mixin margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -29,7 +29,7 @@ h2, .h2 {
     3.5vw + var(--text-base-size),
     calc(var(--text-base-size) * var(--text-scale-ratio) * 2.5)
   );
-  line-height: calc(var(--base-line-height) - 0.1);
+  line-height: calc(var(--base-line-height) - 0.15);
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
@@ -40,7 +40,7 @@ h3, .h3 {
     3vw + var(--text-base-size),
     calc(var(--text-base-size) * var(--text-scale-ratio) * 2)
   );
-  line-height: calc(var(--base-line-height) - 0.05);
+  line-height: calc(var(--base-line-height) - 0.1);
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
