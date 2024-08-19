@@ -2,6 +2,9 @@
              TYPOGRAPHY
 ======================================== */
 
+/**
+ * Site typography variables
+ */
 :root {
   --text-sm: calc(var(--text-base-size) * var(--text-scale-ratio) * 0.75);
   --text-md: calc(var(--text-base-size) * var(--text-scale-ratio) * 1);
@@ -9,7 +12,9 @@
   --text-body: var(--text-md);
 }
 
-/* Headings */
+/**
+ * Headings
+ */
 h1, .h1 {
   font-size: clamp(
     calc(var(--text-base-size) * var(--text-scale-ratio) * 1.75),
@@ -71,7 +76,9 @@ h6, .h6 {
 }
 
 
-/* Site Typography */
+/**
+ * Site wide typography
+ */
 body {
   font-family: var(--body-font-family);
   font-size: clamp(
@@ -95,7 +102,9 @@ body {
   }
 }
 
-/* Utilities */
+/**
+ * Utilities
+ */
 .text-center {
   text-align: center;
 }

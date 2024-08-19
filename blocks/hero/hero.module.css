@@ -1,4 +1,4 @@
-@import '../../styles/mixins.css';
+@import '../../styles/_mixins.css';
 
 .hero-container {
   --hero-min-height: 300px;
@@ -19,7 +19,7 @@
   
       & h1 {
         @mixin margin-x-auto;
-        @mixin margin-y 0;
+        @mixin margin-y-0;
 
         max-width: var(--site-max-width);
         color: var(--hero-title-color);

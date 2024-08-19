@@ -1,7 +1,7 @@
-@import 'reset';
-@import 'breakpoints';
-@import 'palette';
-@import 'spacing';
-@import 'variables';
-@import 'typography';
+@import '_reset';
+@import '_breakpoints';
+@import '_palette';
+@import '_spacing';
+@import '_variables';
+@import '_typography';
 @import 'base';

@@ -2,8 +2,11 @@
              SPACING
 ======================================== */
 
-@import './mixins';
+@import '_mixins';
 
+/**
+ * Spacing variables
+ */
 :root {
   --spacing-xxxxs: calc(0.125 * var(--spacing-unit));
   --spacing-xxxs: calc(0.25 * var(--spacing-unit));
@@ -19,7 +22,10 @@
 }
 
 
-/* Utilities */
+/**
+ * Margin and padding utility classes
+ * Particularly useful in block JS code when creating new elements.
+ */
 .m-xxxxs {
   @mixin margin-all var(--spacing-xxxxs);
 }
