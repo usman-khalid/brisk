@@ -7,7 +7,7 @@
   --site-max-width: 1200px;
 
   /* Typography */
-  --text-base-size: 1rem;
+  --text-base-size: 1rem; /* 16px */
   --text-scale-ratio: 1.25;
   --min-font-size: var(--text-base-size);
   --max-font-size: 1.25rem;
@@ -19,7 +19,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* Spacing */
-  --spacing-unit: 1rem;
+  --spacing-unit: 1rem; /* 16px */
 
   /* Site colors */
   --link-color: var(--brand-primary);

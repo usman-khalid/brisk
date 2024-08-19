@@ -51,7 +51,7 @@ main img {
 }
 
 main .section {
-  padding: 64px var(--spacing-unit);
+  padding: 64px var(--spacing-base);
 }
 
 main .section.highlight {
@@ -81,7 +81,7 @@ a.button:any-link {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: var(--spacing-unit) 0;
+  margin: var(--spacing-base) 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,7 +111,7 @@ button {
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: var(--spacing-unit) 0;
+  margin: var(--spacing-base) 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

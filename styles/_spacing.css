@@ -8,17 +8,18 @@
  * Spacing variables
  */
 :root {
-  --spacing-xxxxs: calc(0.125 * var(--spacing-unit));
-  --spacing-xxxs: calc(0.25 * var(--spacing-unit));
-  --spacing-xxs: calc(0.375 * var(--spacing-unit));
-  --spacing-xs: calc(0.5 * var(--spacing-unit));
-  --spacing-sm: calc(0.75 * var(--spacing-unit));
-  --spacing-md: calc(1.25 * var(--spacing-unit));
-  --spacing-lg: calc(2 * var(--spacing-unit));
-  --spacing-xl: calc(3.25 * var(--spacing-unit));
-  --spacing-xxl: calc(5.25 * var(--spacing-unit));
-  --spacing-xxxl: calc(8.5 * var(--spacing-unit));
-  --spacing-xxxxl: calc(13.75 * var(--spacing-unit));
+  --spacing-xxxxs: calc(0.125 * var(--spacing-unit)); /* 2px */
+  --spacing-xxxs: calc(0.25 * var(--spacing-unit));   /* 4px */
+  --spacing-xxs: calc(0.375 * var(--spacing-unit));   /* 6px */
+  --spacing-xs: calc(0.5 * var(--spacing-unit));      /* 8px */
+  --spacing-sm: calc(0.75 * var(--spacing-unit));     /* 12px */
+  --spacing-base: calc(1 * var(--spacing-unit));      /* 16px */
+  --spacing-md: calc(1.25 * var(--spacing-unit));     /* 20px */
+  --spacing-lg: calc(2 * var(--spacing-unit));        /* 32px */
+  --spacing-xl: calc(3.25 * var(--spacing-unit));     /* 52px */
+  --spacing-xxl: calc(5.25 * var(--spacing-unit));    /* 84px */
+  --spacing-xxxl: calc(8.5 * var(--spacing-unit));    /* 136px */
+  --spacing-xxxxl: calc(13.75 * var(--spacing-unit)); /* 220px */
 }
 
 

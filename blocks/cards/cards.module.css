@@ -5,7 +5,7 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: var(--spacing-unit);
+    grid-gap: var(--spacing-base);
 
     & > li {
       border: 1px solid var(--highlight-background-color);
@@ -20,7 +20,7 @@
   }
 
   & .card-body {
-    margin: var(--spacing-unit);
+    margin: var(--spacing-base);
 
     & > *:first-child {
       margin-top: 0;
@@ -39,7 +39,7 @@
       display: block;
 
       & > li {
-        margin-bottom: var(--spacing-unit);
+        margin-bottom: var(--spacing-base);
 
         & img {
           aspect-ratio: 3.3333;
