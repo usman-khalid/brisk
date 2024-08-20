@@ -3,21 +3,13 @@
 ======================================== */
 
 a.button, button {
-  @mixin button-base;
-
-  &:hover, &:focus {
-    @mixin button-hover-focus;
-  }
+  @mixin button primary;
 
   &.secondary {
-    @mixin button-secondary;
+    @mixin button secondary;
   }
 }
 
 button:disabled {
-  @mixin button-disabled;
-
-  &:hover {
-    @mixin button-disabled-hover;
-  }
+  @mixin button disabled;
 }

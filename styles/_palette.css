@@ -3,25 +3,17 @@
 ======================================== */
 
 :root {
-  /* Base color hue and saturation values */
-  --brand-primary-hs: 6 92%;
-  --brand-secondary-hs: 215 61%;
-  --brand-primary-l: 47%;
-  --brand-secondary-l: 16%;
-  --color-grey-hs: 174 11%;
-  --color-grey-l: 92%;
-
-  /* All computed colors */
-  --brand-primary: hsl(var(--brand-primary-hs) var(--brand-primary-l));
-  --brand-primary-lighter: hsl(var(--brand-primary-hs) calc(var(--brand-primary-l) + 10%));
-  --brand-primary-darker: hsl(var(--brand-secondary-hs) calc(var(--brand-primary-l) - 10%));
-  --brand-secondary: hsl(var(--brand-secondary-hs) var(--brand-secondary-l));
-  --brand-secondary-lighter: hsl(var(--brand-secondary-hs) calc(var(--brand-secondary-l) + 10%));
-  --brand-secondary-darker: hsl(var(--brand-secondary-hs) calc(var(--brand-secondary-l) - 10%));
-  --color-grey: hsl(var(--color-grey-hs) var(--color-grey-l));
-  --color-grey-lighter: hsl(var(--color-grey-hs) calc(var(--color-grey-l) + 10%));
-  --color-grey-darker: hsl(var(--color-grey-hs) calc(var(--color-grey-l) - 10%));
-  --color-khaki: hsl(29deg 17 64);
-  --color-white: hsl(0deg 0% 100%);
-  --color-black: hsla(210deg 11% 4%);
+  /* Lightened Hex Values */
+  --brand-primary: #e04343;
+  --brand-primary-lighter: #ed6d6d;
+  --brand-primary-darker: #c91818;
+  --brand-secondary: #3b5777;
+  --brand-secondary-lighter: #577896;
+  --brand-secondary-darker: #1a324d;
+  --color-grey: #f2f2f2;
+  --color-grey-lighter: #fbfbfb;
+  --color-grey-darker: #e7e7e7;
+  --color-khaki: #b4a685;
+  --color-white: #ffffff;
+  --color-black: #101216;
 }

@@ -2,6 +2,7 @@
              MIXINS 
 ======================================== */
 
+
 /* Lists */ 
 @define-mixin reset-list {
   margin: 0;
@@ -11,46 +12,36 @@
 }
 
 /* Buttons */
-@define-mixin button-base {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: var(--spacing-base) 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
-}
+@define-mixin button $type {
+  @mixin padding-y xxs;
+  @mixin padding-x md;
 
-@define-mixin button-hover-focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+  background-color: var(--brand-$(type));
+  border: 1px solid var(--brand-$(type)-darker);
   color: var(--color-white);
-}
+  border-radius: var(--base-border-radius);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
-@define-mixin button-secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
-}
+  &:hover {
+    background-color: var(--brand-$(type)-lighter);
+    color: var(--color-white);
+    text-decoration: none;
+  }
 
-@define-mixin button-disabled {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
+  &:focus {
+    background-color: var(--brand-$(type)-lighter);
+    outline-offset: 4px;
+  }
 
-@define-mixin button-disabled-hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 
