@@ -14,14 +14,13 @@
   --spacing-xs: calc(0.5 * var(--spacing-unit));      /* 8px */
   --spacing-sm: calc(0.75 * var(--spacing-unit));     /* 12px */
   --spacing-base: calc(1 * var(--spacing-unit));      /* 16px */
-  --spacing-md: calc(1.25 * var(--spacing-unit));     /* 20px */
+  --spacing-md: calc(1.5 * var(--spacing-unit));      /* 24px */
   --spacing-lg: calc(2 * var(--spacing-unit));        /* 32px */
-  --spacing-xl: calc(3.25 * var(--spacing-unit));     /* 52px */
-  --spacing-xxl: calc(5.25 * var(--spacing-unit));    /* 84px */
-  --spacing-xxxl: calc(8.5 * var(--spacing-unit));    /* 136px */
-  --spacing-xxxxl: calc(13.75 * var(--spacing-unit)); /* 220px */
+  --spacing-xl: calc(3 * var(--spacing-unit));        /* 48px */
+  --spacing-xxl: calc(4 * var(--spacing-unit));       /* 64px */
+  --spacing-xxxl: calc(6 * var(--spacing-unit));      /* 96px */
+  --spacing-xxxxl: calc(8 * var(--spacing-unit));     /* 128px */
 }
-
 
 /**
  * Margin and padding utility classes

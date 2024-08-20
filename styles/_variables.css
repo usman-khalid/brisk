@@ -5,6 +5,7 @@
 :root {
   /* Viewports */
   --site-max-width: 1200px;
+  --site-min-width: 320px;
 
   /* Typography */
   --text-base-size: 1rem; /* 16px */

@@ -1,164 +1,33 @@
 /* ========================================= 
              BASE STYLES
 ======================================== */
-main pre {
-  background-color: var(--overlay-background-color);
-  padding: 1em;
-  border-radius: 0.25em;
-  overflow-x: auto;
-  white-space: pre;
-}
-
-main input {
-  font-size: 1.25rem;
-  width: 100%;
-  max-width: 50rem;
-  display: block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-main input:hover {
-  border: 1px solid var(--text-color);
-}
-
-main blockquote {
-  font-style: italic;
-  margin: 3rem;
-  text-indent: -1rem;
-  hanging-punctuation: first;
-}
-
-main blockquote p::before {
-  content: '“';
-  line-height: 0;
-}
-
-main blockquote p::after {
-  content: '”';
-  line-height: 0;
-}
-
-main img {
+img {
   max-width: 100%;
   width: auto;
   height: auto;
 }
 
-main .section {
-  padding: 64px var(--spacing-base);
-}
+a {
+  &:any-link {
+    color: var(--link-color);
+    text-decoration: none;
+  }
 
-main .section.highlight {
-  background-color: var(--highlight-background-color);
-}
-
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
-}
-
-a.button:any-link {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: var(--spacing-base) 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
-}
-
-a.button:hover {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-a.button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-button {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: var(--spacing-base) 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
-}
-
-button:hover {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-button:disabled:hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-a.button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
-}
-
-button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  &:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+  }
 }
 
 .icon {
   display: inline-block;
   height: 24px;
   width: 24px;
-}
 
-.icon svg {
-  height: 100%;
-  width: 100%;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 body {
@@ -166,46 +35,8 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
-}
 
-body.appear {
-  display: unset;
-}
-
-header {
-  height: var(--nav-height);
-}
-
-@media (--breakpoint-sm) {
-  main .section {
-    padding: 64px 32px;
+  &.appear {
+    display: unset;
   }
-}
-
-@media (--breakpoint-lg) {
-  .section > div {
-    max-width: var(--site-max-width);
-    margin: auto;
-  }
-}
-
-/* ========================================= UTILITY CLASSES ======================================== */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.sr-only-focusable:active, .sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
 }

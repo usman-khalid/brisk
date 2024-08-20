@@ -1,0 +1,25 @@
+/* ========================================= 
+             SECTION STYLES
+======================================== */
+
+@import '../_mixins';
+
+.section {
+  @mixin padding-all xl;
+
+  &.highlight {
+    background-color: var(--highlight-background-color);
+  }
+
+  @media (--breakpoint-sm) {
+    @mixin padding-y xl;
+    @mixin padding-x lg;
+  }
+
+  & > div {
+    @media (--breakpoint-lg) {
+      @mixin margin-x-auto;
+      max-width: var(--site-max-width);
+    }
+  }
+}

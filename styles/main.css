@@ -5,3 +5,8 @@
 @import '_variables';
 @import '_typography';
 @import 'base';
+
+/* Global Components, Elements & Utilities*/
+@import './global/section';
+@import './global/button';
+@import './global/utils';
