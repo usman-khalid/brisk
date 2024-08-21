@@ -1,0 +1,8 @@
+<div class="{{carouselStyles.carousel}}" data-number-of-slides="{{config.numberOfSlides}}">
+  <div class="{{carouselStyles.slide}}">
+    slide.
+  </div>
+  <div class="{{carouselStyles.slide}}">
+    slide.
+  </div>
+</div>

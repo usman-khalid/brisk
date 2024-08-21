@@ -160,7 +160,7 @@ function readBlockConfig(block) {
       const cols = [...row.children];
       if (cols[1]) {
         const col = cols[1];
-        const name = toClassName(cols[0].textContent);
+        const name = toCamelCase(cols[0].textContent);
         let value = '';
         if (col.querySelector('a')) {
           const as = [...col.querySelectorAll('a')];
