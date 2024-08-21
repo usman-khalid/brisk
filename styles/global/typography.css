@@ -3,16 +3,6 @@
 ======================================== */
 
 /**
- * Site typography variables
- */
-:root {
-  --text-sm: calc(var(--text-base-size) * var(--text-scale-ratio) * 0.75);
-  --text-md: calc(var(--text-base-size) * var(--text-scale-ratio) * 1);
-  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25);
-  --text-body: var(--text-md);
-}
-
-/**
  * Headings
  */
 h1, .h1 {
@@ -102,21 +92,3 @@ body {
   }
 }
 
-/**
- * Text Alignment Utilities
- */
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-}

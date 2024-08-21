@@ -2,6 +2,9 @@
              UTILITY CLASSES
 ======================================== */
 
+/**
+ * Visually hidden utility class
+ */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -20,4 +23,115 @@
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+/**
+ * Text Alignment utility classes
+ */
+ .text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/**
+ * Margin and padding utility classes
+ * Particularly useful in block JS code when creating new elements.
+ */
+ .m-xxxxs {
+  @mixin margin-all var(--spacing-xxxxs);
+}
+
+.m-xxxs {
+  @mixin margin-all var(--spacing-xxxs);
+}
+
+.m-xxs {
+  @mixin margin-all var(--spacing-xxs);
+}
+
+.m-xs {
+  @mixin margin-all var(--spacing-xs);
+}
+
+.m-sm {
+  @mixin margin-all var(--spacing-sm);
+}
+
+.m-md {
+  @mixin margin-all var(--spacing-md);
+}
+
+.m-lg {
+  @mixin margin-all var(--spacing-lg);
+}
+
+.m-xl {
+  @mixin margin-all var(--spacing-xl);
+}
+
+.m-xxl {
+  @mixin margin-all var(--spacing-xxl);
+}
+
+.m-xxxl {
+  @mixin margin-all var(--spacing-xxxl);
+}
+
+.m-xxxxl {
+  @mixin margin-all var(--spacing-xxxxl);
+}
+
+.p-xxxxs {
+  @mixin padding-all var(--spacing-xxxxs);
+}
+
+.p-xxxs {
+  @mixin padding-all var(--spacing-xxxs);
+}
+
+.p-xxs {
+  @mixin padding-all var(--spacing-xxs);
+}
+
+.p-xs {
+  @mixin padding-all var(--spacing-xs);
+}
+
+.p-sm {
+  @mixin padding-all var(--spacing-sm);
+}
+
+.p-md {
+  @mixin padding-all var(--spacing-md);
+}
+
+.p-lg {
+  @mixin padding-all var(--spacing-lg);
+}
+
+.p-xl {
+  @mixin padding-all var(--spacing-xl);
+}
+
+.p-xxl {
+  @mixin padding-all var(--spacing-xxl);
+}
+
+.p-xxxl {
+  @mixin padding-all var(--spacing-xxxl);
+}
+
+.p-xxxxl {
+  @mixin padding-all var(--spacing-xxxxl);
 }
