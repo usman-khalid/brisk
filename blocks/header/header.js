@@ -1,4 +1,5 @@
 import { decorateIcons, getMetadata } from '../../scripts/aem.js';
+import { wrapImgsInLinks } from '../../utils/dom-utils.js';
 import headerStyles from './header.module.css';
 
 // media query match that indicates mobile/tablet width
@@ -162,6 +163,7 @@ export default async function decorate(block) {
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
     decorateIcons(nav);
+    wrapImgsInLinks(nav);
     const navWrapper = document.createElement('div');
     navWrapper.className = headerStyles.navWrapper;
     navWrapper.append(nav);

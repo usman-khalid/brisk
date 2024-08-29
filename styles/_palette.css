@@ -1,0 +1,130 @@
+:root {
+  /* Lightness Variables */
+  --lightness-00: 2%;
+  --lightness-05: 7%;
+  --lightness-10: 12%;
+  --lightness-15: 17%;
+  --lightness-20: 22%;
+  --lightness-25: 27%;
+  --lightness-30: 32%;
+  --lightness-35: 37%;
+  --lightness-40: 42%;
+  --lightness-45: 47%;
+  --lightness-50: 52%;
+  --lightness-55: 57%;
+  --lightness-60: 62%;
+  --lightness-65: 67%;
+  --lightness-70: 72%;
+  --lightness-75: 77%;
+  --lightness-80: 82%;
+  --lightness-85: 87%;
+  --lightness-90: 92%;
+  --lightness-95: 97%;
+  --lightness-100: 100%;
+
+  /* Brand Colors */
+  --brand-primary-05: hsl(0, 85%, var(--lightness-95));
+  --brand-primary-10: hsl(0, 85%, var(--lightness-90));
+  --brand-primary-15: hsl(0, 85%, var(--lightness-85));
+  --brand-primary-20: hsl(0, 85%, var(--lightness-80));
+  --brand-primary-25: hsl(0, 85%, var(--lightness-75));
+  --brand-primary-30: hsl(0, 85%, var(--lightness-70));
+  --brand-primary-35: hsl(0, 85%, var(--lightness-65));
+  --brand-primary-40: hsl(0, 85%, var(--lightness-60));
+  --brand-primary-45: hsl(0, 85%, var(--lightness-55));
+  --brand-primary: hsl(0, 85%, var(--lightness-50));
+  --brand-primary-55: hsl(0, 85%, var(--lightness-45));
+  --brand-primary-60: hsl(0, 85%, var(--lightness-40));
+  --brand-primary-65: hsl(0, 85%, var(--lightness-35));
+  --brand-primary-70: hsl(0, 85%, var(--lightness-30));
+  --brand-primary-75: hsl(0, 85%, var(--lightness-25));
+  --brand-primary-80: hsl(0, 85%, var(--lightness-20));
+  --brand-primary-85: hsl(0, 85%, var(--lightness-15));
+  --brand-primary-90: hsl(0, 85%, var(--lightness-10));
+  --brand-primary-95: hsl(0, 85%, var(--lightness-05)); 
+
+  --brand-secondary-05: hsl(214, 85%, var(--lightness-95));
+  --brand-secondary-10: hsl(214, 85%, var(--lightness-90));
+  --brand-secondary-15: hsl(214, 85%, var(--lightness-85));
+  --brand-secondary-20: hsl(214, 85%, var(--lightness-80));
+  --brand-secondary-25: hsl(214, 85%, var(--lightness-75));
+  --brand-secondary-30: hsl(214, 85%, var(--lightness-70));
+  --brand-secondary-35: hsl(214, 85%, var(--lightness-65));
+  --brand-secondary-40: hsl(214, 85%, var(--lightness-60));
+  --brand-secondary-45: hsl(214, 85%, var(--lightness-55));
+  --brand-secondary: hsl(214, 85%, var(--lightness-50));
+  --brand-secondary-55: hsl(214, 85%, var(--lightness-45));
+  --brand-secondary-60: hsl(214, 85%, var(--lightness-40));
+  --brand-secondary-65: hsl(214, 85%, var(--lightness-35));
+  --brand-secondary-70: hsl(214, 85%, var(--lightness-30));
+  --brand-secondary-75: hsl(214, 85%, var(--lightness-25));
+  --brand-secondary-80: hsl(214, 85%, var(--lightness-20));
+  --brand-secondary-85: hsl(214, 85%, var(--lightness-15));
+  --brand-secondary-90: hsl(214, 85%, var(--lightness-10));
+  --brand-secondary-95: hsl(214, 85%, var(--lightness-05));
+
+  --brand-tertiary-05: hsl(161, 70%, var(--lightness-95));
+  --brand-tertiary-10: hsl(161, 70%, var(--lightness-90));
+  --brand-tertiary-15: hsl(161, 70%, var(--lightness-85));
+  --brand-tertiary-20: hsl(161, 70%, var(--lightness-80));
+  --brand-tertiary-25: hsl(161, 70%, var(--lightness-75));
+  --brand-tertiary-30: hsl(161, 70%, var(--lightness-70));
+  --brand-tertiary-35: hsl(161, 70%, var(--lightness-65));
+  --brand-tertiary-40: hsl(161, 70%, var(--lightness-60));
+  --brand-tertiary-45: hsl(161, 70%, var(--lightness-55));
+  --brand-tertiary: hsl(161, 70%, var(--lightness-50));
+  --brand-tertiary-55: hsl(161, 70%, var(--lightness-45));
+  --brand-tertiary-60: hsl(161, 70%, var(--lightness-40));
+  --brand-tertiary-65: hsl(161, 70%, var(--lightness-35));
+  --brand-tertiary-70: hsl(161, 70%, var(--lightness-30));
+  --brand-tertiary-75: hsl(161, 70%, var(--lightness-25));
+  --brand-tertiary-80: hsl(161, 70%, var(--lightness-20));
+  --brand-tertiary-85: hsl(161, 70%, var(--lightness-15));
+  --brand-tertiary-90: hsl(161, 70%, var(--lightness-10));
+  --brand-tertiary-95: hsl(161, 70%, var(--lightness-05));
+
+
+  /* Neutral Colors */
+  --color-black: hsl(0, 0%, var(--lightness-00));
+  --color-grey-05: hsl(0, 0%, var(--lightness-95));
+  --color-grey-10: hsl(0, 0%, var(--lightness-90));
+  --color-grey-20: hsl(0, 0%, var(--lightness-80));
+  --color-grey-30: hsl(0, 0%, var(--lightness-70));
+  --color-grey-40: hsl(0, 0%, var(--lightness-60));
+  --color-grey-50: hsl(0, 0%, var(--lightness-50));
+  --color-grey-60: hsl(0, 0%, var(--lightness-40));
+  --color-grey-70: hsl(0, 0%, var(--lightness-30));
+  --color-grey-80: hsl(0, 0%, var(--lightness-20));
+  --color-grey-90: hsl(0, 0%, var(--lightness-10));
+  --color-grey-95: hsl(0, 0%, var(--lightness-05));
+  --color-white: hsl(0, 0%, var(--lightness-100));
+
+  /* Success Colors */
+  --color-success-10: hsl(120, 60%, var(--lightness-10));
+  --color-success-30: hsl(120, 60%, var(--lightness-30));
+  --color-success: hsl(120, 60%, var(--lightness-50));
+  --color-success-70: hsl(120, 60%, var(--lightness-70));
+  --color-success-90: hsl(120, 60%, var(--lightness-90));
+
+  /* Warning Colors */
+  --color-warning-10: hsl(45, 100%, var(--lightness-10));
+  --color-warning-30: hsl(45, 100%, var(--lightness-30));
+  --color-warning: hsl(45, 100%, var(--lightness-50));
+  --color-warning-70: hsl(45, 100%, var(--lightness-70));
+  --color-warning-90: hsl(45, 100%, var(--lightness-90));
+
+
+  /* Danger Colors */
+  --color-danger-10: hsl(0, 70%, var(--lightness-10));
+  --color-danger-30: hsl(0, 70%, var(--lightness-30));
+  --color-danger: hsl(0, 70%, var(--lightness-50));
+  --color-danger-70: hsl(0, 70%, var(--lightness-70));
+  --color-danger-90: hsl(0, 70%, var(--lightness-90));
+
+  /* Info Colors */
+  --color-info-10: hsl(200, 100%, var(--lightness-10));
+  --color-info-30: hsl(200, 100%, var(--lightness-30));
+  --color-info: hsl(200, 100%, var(--lightness-50));
+  --color-info-70: hsl(200, 100%, var(--lightness-70));
+  --color-info-90: hsl(200, 100%, var(--lightness-90));
+}

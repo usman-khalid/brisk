@@ -2,6 +2,9 @@
 @import '../../styles/_breakpoints';
 
 header {
+  --nav-max-width: calc(var(--site-max-width) + var(--spacing-xl));
+  --logo-width: 100px;
+
   height: var(--nav-height);
 
   & .nav-wrapper {
@@ -12,15 +15,17 @@ header {
   }
 
   & nav {
+    @mixin padding-y-0;
+    @mixin padding-x md;
+
     box-sizing: border-box;
     display: grid;
-    grid-template: "hamburger brand tools" var(--nav-height) "sections sections sections" 1fr / auto 1fr auto;
+    grid-template: "brand tools hamburger" var(--nav-height) "sections sections sections" 1fr / auto 1fr auto;
     align-items: center;
     gap: 0 2em;
     margin: auto;
-    max-width: 1264px;
+    max-width: var(--nav-max-width);
     height: var(--nav-height);
-    padding: 0 1rem;
     font-family: var(--body-font-family);
 
     & p {
@@ -81,13 +86,13 @@ header {
 
     & .nav-brand {
       grid-area: brand;
-      flex-basis: 128px;
+      flex-basis: var(--logo-width);
       font-size: var(--text-lg);
       font-weight: 700;
       line-height: 1;
 
       & img {
-        width: 128px;
+        width: var(--logo-width);
         height: auto;
       }
     }
@@ -126,7 +131,7 @@ header {
   }
 
   & nav[aria-expanded='true'] {
-    grid-template: "hamburger brand" var(--nav-height) "sections sections" 1fr "tools tools" var(--nav-height) / auto 1fr;
+    /* grid-template: "hamburger brand" var(--nav-height) "sections sections" 1fr "tools tools" var(--nav-height) / auto 1fr; */
     overflow-y: auto;
     min-height: 100vh;
 		
@@ -190,14 +195,6 @@ header {
   }
 }
 
-@media (--breakpoint-sm) {
-  header {
-    & nav {
-      padding: 0 2rem;
-    }
-  }
-}
-
 @media (--breakpoint-lg) {
   header {
     & nav {
@@ -246,7 +243,7 @@ header {
           display: flex;
           gap: 2em;
           margin: 0;
-          font-size: var(--text-sm);
+          font-size: var(--text-md);
         }
 
         > ul {

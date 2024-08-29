@@ -5,7 +5,7 @@
 @import '../_mixins';
 
 .section {
-  @mixin padding-all xl;
+  @mixin padding-all md;
 
   &.highlight {
     background-color: var(--highlight-background-color);
@@ -13,7 +13,6 @@
 
   @media (--breakpoint-sm) {
     @mixin padding-y xl;
-    @mixin padding-x lg;
   }
 
   & > div {

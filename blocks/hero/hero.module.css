@@ -1,4 +1,5 @@
 @import '../../styles/_mixins.css';
+@import '../../styles/_breakpoints.css';
 
 .hero-container {
   --hero-min-height: 300px;
@@ -12,7 +13,12 @@
     }
   
     .hero {
-      @mixin padding-all lg;
+      @mixin padding-y lg;
+      @mixin padding-x md;
+
+      @media (--breakpoint-sm) {
+        @mixin padding-y xl;
+      }
 
       position: relative;
       min-height: var(--hero-min-height);

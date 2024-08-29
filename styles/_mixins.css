@@ -11,39 +11,11 @@
   display: block;
 }
 
-/* Buttons */
-@define-mixin button $type {
-  @mixin padding-y xxs;
-  @mixin padding-x md;
-
-  background-color: var(--brand-$(type));
-  border: 1px solid var(--brand-$(type)-darker);
-  color: var(--color-white);
-  border-radius: var(--base-border-radius);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: var(--brand-$(type)-lighter);
-    color: var(--color-white);
-    text-decoration: none;
-  }
-
-  &:focus {
-    background-color: var(--brand-$(type)-lighter);
-    outline-offset: 4px;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+/* Layout, Width, Height etc */
+@define-mixin shape $width, $height {
+  width: $width;
+  height: $height;
 }
-
 
 /* Margins & Paddings */
 @define-mixin padding-all $size {
@@ -93,3 +65,104 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Buttons */
+/* Base button mixin */
+@define-mixin button-base {
+  @mixin padding-y sm;
+  @mixin padding-x md;
+
+  display: inline-block;
+  border: 0;
+  border-radius: var(--base-border-radius);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--base-transition);
+
+  &:focus {
+    outline-offset: 4px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+/* Primary button */
+@define-mixin button-primary {
+  @mixin button-base;
+  background-color: var(--brand-primary);
+  color: var(--color-white);
+
+  &:hover, &:focus {
+    background-color: var(--brand-primary-55);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+}
+
+/* Secondary button */
+@define-mixin button-secondary {
+  @mixin button-base;
+  background-color: transparent;
+  color: var(--brand-secondary);
+  box-shadow: inset 0 0 0 2px var(--brand-secondary);
+
+  &:hover, &:focus {
+    background-color: var(--brand-secondary-05);
+    text-decoration: none;
+  }
+}
+
+/* Tertiary button */
+@define-mixin button-tertiary {
+  --chevron-size: calc(var(--base-unit) / 2);
+  --border: 1px solid var(--brand-tertiary-60);
+
+  @mixin button-base;
+  @mixin padding-x-0;
+  @mixin padding-y-0;
+
+  background-color: transparent;
+  color: var(--brand-tertiary-60);
+  border: none;
+  position: relative;
+
+  &::after {
+    @mixin shape var(--chevron-size), var(--chevron-size);
+
+    content: '';
+    display: inline-block;
+    border-radius: 0;
+    border-bottom: var(--border);
+    border-right: var(--border);
+    transform: rotate(-45deg);
+    position: relative;
+    margin-left: var(--spacing-xxxxs);
+    top: calc(var(--spacing-xxxxs) * -1);
+    
+  }
+
+  &:hover {
+    color: var(--brand-tertiary-60);
+  }
+
+  &::before {
+    @mixin shape 0, var(--spacing-xxxxs);
+    content: '';
+    position: absolute;
+    background-color: var(--brand-tertiary-60);
+    bottom: 0;
+    left: 0;
+    transition: width var(--base-transition);
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+

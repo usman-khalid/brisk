@@ -3,34 +3,27 @@
 ======================================== */
 
 :root {
+  --base-unit: 1rem;
+
   /* Viewports */
   --site-max-width: 1200px;
   --site-min-width: 320px;
 
-  /* Palette */
-  --brand-primary: #e04343;
-  --brand-primary-lighter: #ed6d6d;
-  --brand-primary-darker: #c91818;
-  --brand-secondary: #3b5777;
-  --brand-secondary-lighter: #577896;
-  --brand-secondary-darker: #1a324d;
-  --color-grey: #f2f2f2;
-  --color-grey-lighter: #fbfbfb;
-  --color-grey-darker: #e7e7e7;
-  --color-khaki: #b4a685;
-  --color-white: #ffffff;
-  --color-black: #101216;
-
   /* Typography */
-  --text-base-size: 1rem; /* 16px */
+  --text-base-size: var(--base-unit); /* 16px */
   --text-scale-ratio: 1.25;
   --min-font-size: var(--text-base-size);
-  --max-font-size: 1.25rem;
+  --max-font-size: var(--text-base-size) * var(--text-scale-ratio);
   --base-line-height: 1.4;
-  --text-sm: calc(var(--text-base-size) * var(--text-scale-ratio) * 0.75);
-  --text-md: calc(var(--text-base-size) * var(--text-scale-ratio) * 1);
-  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio) * 1.25);
+  --text-sm: calc(var(--text-base-size) * 0.75);
+  --text-md: calc(var(--text-base-size) * 1);
+  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio));
   --text-body: var(--text-md);
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 
   /* Fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -38,7 +31,7 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* Spacing */
-  --spacing-unit: 1rem;
+  --spacing-unit: var(--base-unit);
   --spacing-xxxxs: calc(0.125 * var(--spacing-unit)); /* 2px */
   --spacing-xxxs: calc(0.25 * var(--spacing-unit));   /* 4px */
   --spacing-xxs: calc(0.375 * var(--spacing-unit));   /* 6px */
@@ -52,17 +45,33 @@
   --spacing-xxxl: calc(6 * var(--spacing-unit));      /* 96px */
   --spacing-xxxxl: calc(8 * var(--spacing-unit));     /* 128px */
 
-  /* UI */
-  --base-border-radius: 4px;
-
   /* Site colors */
   --link-color: var(--brand-primary);
-  --link-hover-color: var(--brand-primary-lighter);
+  --link-hover-color: var(--brand-primary-55);
   --background-color: var(--color-white);
-  --overlay-background-color: var(--color-grey-darker);
-  --highlight-background-color: var(--color-grey);
-  --text-color: var(--color-black);
+  --highlight-background-color: var(--color-grey-10);
+  --text-color: var(--color-grey-80);
+
+  /* UI */
+  /* Border radius and transition */
+  --base-border-radius: var(--spacing-xxs);
+  --base-transition: 0.3s ease-in-out;
+
+  /* Z-indexes */
+  --z-index-seabed: -10000;
+  --z-index-below: -100;
+  --z-index-default: 1;
+  --z-index-above: 100;
+  --z-index-nav: 600;
+  --z-index-backdrop: 1040;
+  --z-index-overlay: 1045;
+  --z-index-modal: 1050;
+  --z-index-popover: 1100;
+  --z-index-tooltip: 1100;
+
+  /* Icons */
+  --icon-size: 24px;
 
   /* Nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
 }

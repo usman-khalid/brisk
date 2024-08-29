@@ -5,7 +5,7 @@
  * @param {string|Element} html content to add
  * @returns the element
  */
-function createElement(tagName, props, html) {
+const createElement = (tagName, props, html) => {
   const elem = document.createElement(tagName);
   if (props) {
     Object.keys(props).forEach((propName) => {
@@ -36,29 +36,57 @@ function createElement(tagName, props, html) {
   }
 
   return elem;
-}
+};
 
 /**
- * filter the link siblings to get only the siblings that are not empty text nodes
- * @param {Element} link the link
- * @returns a list of sibling nodes that aren't empty text nodes or the current link
+ * Wraps images followed by links within a matching <a> tag.
+ * @param {Element} container The container element
  */
-function getLinkSiblings(link) {
-  const parent = link.parentElement;
-  const linkSiblings = [...parent.childNodes].filter((node) => {
-    if (link === node) return false; // The link itself is not a sibling
-    if (node.nodeType === Node.TEXT_NODE) {
-      // If a sibling is a text that is more than whitespace
-      // then this link is inside other text.
-      return node.textContent.trim().length > 0;
-    }
-    return true;
-  });
+const wrapImgsInLinks = (container) => {
+  const ignorePatterns = ['/fragments/', '/forms/'];
+  const pictures = container.querySelectorAll('picture');
 
-  return linkSiblings;
-}
+  pictures.forEach((pic) => {
+    // Case 1: <picture><br/><a>
+    if (
+      pic.nextElementSibling?.tagName === 'BR'
+      && pic.nextElementSibling.nextElementSibling?.tagName === 'A'
+    ) {
+      const link = pic.nextElementSibling.nextElementSibling;
+      if (link.textContent.includes(link.getAttribute('href'))) {
+        if (ignorePatterns.some((pattern) => link.getAttribute('href').includes(pattern))) {
+          return;
+        }
+        pic.nextElementSibling.remove(); // Remove <br/>
+        link.innerHTML = pic.outerHTML;
+        pic.replaceWith(link);
+      }
+      return;
+    }
+
+    // Case 2: <p><picture></p><p><a></p>
+    const parent = pic.parentElement;
+    const nextSibling = parent.nextElementSibling;
+
+    if (
+      parent.tagName === 'P'
+      && nextSibling?.tagName === 'P'
+      && nextSibling.children.length === 1
+    ) {
+      const link = nextSibling.querySelector('a');
+      if (link && link.textContent.includes(link.getAttribute('href'))) {
+        if (ignorePatterns.some((pattern) => link.getAttribute('href').includes(pattern))) {
+          return;
+        }
+        link.parentElement.remove();
+        link.innerHTML = pic.outerHTML;
+        pic.replaceWith(link);
+      }
+    }
+  });
+};
 
 export {
   createElement,
-  getLinkSiblings,
+  wrapImgsInLinks,
 };

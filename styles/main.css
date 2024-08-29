@@ -1,7 +1,9 @@
 @import '_variables';
 @import '_breakpoints';
+@import '_palette';
 
 /* Global site wide styles, components, and utilities */
+@import './global/reset';
 @import './global/base';
 @import './global/typography';
 @import './global/section';

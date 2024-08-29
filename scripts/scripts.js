@@ -25,8 +25,15 @@ function buildHeroBlock(main) {
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = h1.closest('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
+
+    if (section.querySelector('.section-metadata') && section.querySelector('.section-metadata').querySelector('picture')) {
+      return;
+    }
+
+    const elems = [...section.children];
+    const filtered = elems.filter((el) => !el.classList.contains('section-metadata'));
+    const block = buildBlock('hero', { elems: filtered });
+    section.append(block);
   }
 }
 

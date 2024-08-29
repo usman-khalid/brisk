@@ -2,14 +2,20 @@
              BUTTON STYLES
 ======================================== */
 
-a.button, button {
-  @mixin button primary;
+@import '../_mixins';
 
-  &.secondary {
-    @mixin button secondary;
+.button-container {
+  margin-top: var(--spacing-base);
+
+  & a.button, button {
+    @mixin button-primary;
+  
+    &.secondary {
+      @mixin button-secondary;
+    }
+  
+    &.tertiary {
+      @mixin button-tertiary;
+    }
   }
-}
-
-button:disabled {
-  @mixin button disabled;
 }
